@@ -12,6 +12,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+import toma400.baedoorlib.core.LibBlocks;
 import toma400.baedoorlib.core.LibItems;
 import toma400.baedoorlib.core.LibUtils;
 
@@ -28,6 +29,7 @@ public class BaedoorLib
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         LibUtils.registerTabs(eventBus);
+        LibBlocks.register(eventBus);
         LibItems.register(eventBus);
         eventBus.addListener(this::commonSetup);
 

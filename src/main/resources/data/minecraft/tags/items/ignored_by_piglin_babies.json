@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+      "baedoorlib:nether_soul_essence",
+      "baedoorlib:block_of_nether_soul_essence"
+  ]
+}

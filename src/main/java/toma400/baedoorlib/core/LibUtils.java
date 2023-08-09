@@ -5,6 +5,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
@@ -17,6 +18,9 @@ public class LibUtils {
     // fills the creative tab with items (in order defined in LibItems.ITEMS registry, I assume)
     private static void fillTab(CreativeModeTab.Output pOutput) {
         for (RegistryObject<Item> it : LibItems.ITEMS.getEntries()) {
+            pOutput.accept(it.get());
+        }
+        for (RegistryObject<Block> it : LibBlocks.BLOCKS.getEntries()) {
             pOutput.accept(it.get());
         }
     }

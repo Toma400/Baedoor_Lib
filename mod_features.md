@@ -18,6 +18,10 @@ with Soul Speed enchantment.
 Block of Nether Soul Essence can be turned into soul soil by either smelting
 it or lava touching it.
 
+Additionally, Block of Nether Soul Essence scares piglins, if placed, as well
+as blocks vibrations, similarly to wool. Dead souls don't like noises...  
+Similarly to soul sand and soul soil, you can summon wither with this block.
+
 |          Mod          |                            Usage                            |
 |:---------------------:|:-----------------------------------------------------------:|
 |         Base          | Renewability of soul soil, alternative block for Soul Speed |

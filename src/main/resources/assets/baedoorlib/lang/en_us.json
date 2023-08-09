@@ -1,5 +1,7 @@
 {
     "item.baedoorlib.nether_soul_essence": "Nether Soul Essence",
 
+    "block.baedoorlib.block_of_nether_soul_essence": "Block of Nether Soul Essence",
+
     "creative_tab.baedoorlib.baedoorlib_tab": "Baedoor Lib"
 }

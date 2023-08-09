@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "nether_soul_essence",
+    "pattern": [
+        "N"
+    ],
+    "key": {
+        "N": {
+            "item": "baedoorlib:block_of_nether_soul_essence"
+        }
+    },
+    "result": {
+        "item": "baedoorlib:nether_soul_essence",
+        "count": 9
+    }
+}

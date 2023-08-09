@@ -4,8 +4,9 @@ import os
 
 type
     EntryCategory = enum
-        ITEM = "item"
-        TAB  = "creative_tab"  # requires string structured as: "creative_tab." + MOD_ID + "." + TAB_ID, since it sets three elements, in TranslationLine style
+        ITEM  = "item"
+        BLOCK = "block"
+        TAB   = "creative_tab"  # requires string structured as: "creative_tab." + MOD_ID + "." + TAB_ID, since it sets three elements, in TranslationLine style
     TranslationLine = object
         category: string
         mod_id:   string
