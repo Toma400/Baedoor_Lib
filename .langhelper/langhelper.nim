@@ -1,3 +1,4 @@
+import questionable
 import nigui
 import utils
 
@@ -7,10 +8,16 @@ import utils
 # [category][ID][subID] : [translation]
 init(app)
 
+var lang_id  = ""
+var lang_obj = newSeq[LanguageFile]()
+
 var window = newWindow("JSON Language Files Helper")
 var ctMain = newLayoutContainer(Layout_Vertical)
 var newLangTx = newTextBox()
 var newLangBt = newButton("Create language entry")
+var loadLangLs = newComboBox(languageFilesList())
+var loadLangBt = newButton("Load language entry")
+var loadLangTx = newTextArea()
 block settings:
   window.width  = 800
   window.height = 600
@@ -19,9 +26,17 @@ block binding:
   block newLang:
     ctMain.add(newLangTx)
     ctMain.add(newLangBt)
+    ctMain.add(loadLangLs)
+    ctMain.add(loadLangBt)
+    ctMain.add(loadLangTx)
 
 newLangBt.onClick = proc(event: ClickEvent) =
     copyFile(newLangTx.text)
+loadLangBt.onClick = proc(event: ClickEvent) =
+    lang_id  = loadLangLs.value
+    lang_obj = @[languageFileParser(lang_id)]
+    for line in toSeq(lang_obj[0]):
+        loadLangTx.addLine(line)
 
 # running
 show(window)

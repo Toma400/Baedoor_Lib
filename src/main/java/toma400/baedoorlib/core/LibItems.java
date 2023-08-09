@@ -19,13 +19,6 @@ public class LibItems {
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
-    public static void registerTab(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            for (RegistryObject<Item> it : ITEMS.getEntries()) {
-                event.accept(it);
-            }
-        }
-    }
 }
 
 

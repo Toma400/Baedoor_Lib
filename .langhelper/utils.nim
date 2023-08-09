@@ -5,6 +5,7 @@ import os
 type
     EntryCategory = enum
         ITEM = "item"
+        TAB  = "creative_tab"  # requires string structured as: "creative_tab." + MOD_ID + "." + TAB_ID, since it sets three elements, in TranslationLine style
     TranslationLine = object
         category: string
         mod_id:   string
@@ -12,7 +13,7 @@ type
         transl:   string
     TranslationSection = object
         lines:    seq[TranslationLine]
-    LanguageFile = object
+    LanguageFile* = object
         sections: seq[TranslationSection]
 
 # gets mod ID from gradle.properties file of the mod
@@ -68,6 +69,17 @@ proc `$`* (l: LanguageFile): string =
         ret = ret & "[SECTION " & $nid & "]\n"
         for line in sect.lines:
             ret = ret & "[" & line.category & "] " & line.id & " = " & line.transl & "\n"
+        nid += 1
+    return ret
+
+# string representation of
+proc `toSeq`* (l: LanguageFile): seq[string] =
+    var ret = newSeq[string]()
+    var nid = 1
+    for sect in l.sections:
+        ret.add("[SECTION " & $nid & "]")
+        for line in sect.lines:
+            ret.add("[" & line.category & "] " & line.id & " = " & line.transl)
         nid += 1
     return ret
 

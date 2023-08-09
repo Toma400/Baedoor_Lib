@@ -13,6 +13,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 import toma400.baedoorlib.core.LibItems;
+import toma400.baedoorlib.core.LibUtils;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(BaedoorLib.MOD_ID)
@@ -26,6 +27,7 @@ public class BaedoorLib
     {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        LibUtils.registerTabs(eventBus);
         LibItems.register(eventBus);
         eventBus.addListener(this::commonSetup);
 
@@ -41,7 +43,7 @@ public class BaedoorLib
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-        LibItems.registerTab(event);
+
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
