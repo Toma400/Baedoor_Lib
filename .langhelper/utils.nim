@@ -6,7 +6,7 @@ import os
 proc gradlePropertiesParser* (key: string): string =
     let cwd = getCurrentDir().replace(r".langhelper", "")
     for line in lines(cwd & "gradle.properties"):
-        if line.contains("mod_id"):
+        if line.contains(key):
             return split(line, "=")[1].replace(" ", "")
 
 # parses languge file of ID provided

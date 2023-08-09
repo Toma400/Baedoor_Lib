@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "baedoorlib:item/nether_soul_essence"
+  }
+}
