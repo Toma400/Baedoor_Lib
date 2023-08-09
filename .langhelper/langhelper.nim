@@ -8,15 +8,20 @@ import utils
 init(app)
 
 var window = newWindow("JSON Language Files Helper")
-var main   = newLayoutContainer(Layout_Vertical)
+var ctMain = newLayoutContainer(Layout_Vertical)
+var newLangTx = newTextBox()
+var newLangBt = newButton("Create language entry")
 block settings:
   window.width  = 800
   window.height = 600
 block binding:
-  window.add(main)
+  window.add(ctMain)
+  block newLang:
+    ctMain.add(newLangTx)
+    ctMain.add(newLangBt)
 
-echo languageFileParser("en_us")
-echo languageFiles()
+newLangBt.onClick = proc(event: ClickEvent) =
+    copyFile(newLangTx.text)
 
 # running
 show(window)
