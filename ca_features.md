@@ -1,3 +1,4 @@
-| Feature moved | WoB | CoB | SoB | Indev/Done? |
-|:-------------:|:---:|:---:|:---:|:-----------:|
-|    Cirtain    | ⭐️  | ⭐️  |     |     ⚒️      |
+|    Feature moved    | WoB | CoB | SoB | Indev/Done? |
+|:-------------------:|:---:|:---:|:---:|:-----------:|
+|       Cirtain       | ⭐️  | ⭐️  |     |     ⚒️      |
+| Nether Soul Essence | ⭐️  |  ️  | ⭐️  |     ⚒️      |
