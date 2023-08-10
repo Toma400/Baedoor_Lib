@@ -3,6 +3,7 @@ package toma400.baedoorlib.events;
 import net.minecraft.core.BlockPos;
 import net.minecraft.data.worldgen.DimensionTypes;
 import net.minecraft.nbt.EndTag;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.ItemStack;
@@ -13,6 +14,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.dimension.DimensionType;
+import net.minecraft.world.level.levelgen.WorldDimensions;
 import net.minecraft.world.level.material.LavaFluid;
 import net.minecraftforge.event.entity.living.LivingDestroyBlockEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
@@ -61,8 +63,10 @@ public class BlockEvents {
 
         if (!event.getLevel().isClientSide()) {
 
-            // change to less awkward procs, it shouldn't add things to player, but rather spawn them
-            if (event.getLevel().getBiome(event.getPos()).is(Biomes.THE_END)){
+            // change to less awkward procs, it shouldn't add things to player, but rather spawn them (also make this checking dimension, not biomes, geez)
+            if (event.getLevel().getBiome(event.getPos()).is(Biomes.THE_END) || event.getLevel().getBiome(event.getPos()).is(Biomes.END_BARRENS) ||
+                event.getLevel().getBiome(event.getPos()).is(Biomes.END_MIDLANDS) || event.getLevel().getBiome(event.getPos()).is(Biomes.END_HIGHLANDS) ||
+                event.getLevel().getBiome(event.getPos()).is(Biomes.SMALL_END_ISLANDS)){
                 if (Arrays.asList(GLISTERING_ASH_DROPS).contains(event.getLevel().getBlockState(event.getPos()).getBlock())) {
                     event.getPlayer().addItem(new ItemStack(LibItems.GLISTERING_ASH.get()));
                     // experimental: XP drop?
