@@ -1,7 +1,9 @@
 {
     "item.baedoorlib.nether_soul_essence": "Nether Soul Essence",
+    "item.baedoorlib.glistering_ash":      "Glistering Ash",
 
     "block.baedoorlib.block_of_nether_soul_essence": "Block of Nether Soul Essence",
+    "block.baedoorlib.glistering_sand":              "Glistering Sand",
 
     "creative_tab.baedoorlib.baedoorlib_tab": "Baedoor Lib"
 }

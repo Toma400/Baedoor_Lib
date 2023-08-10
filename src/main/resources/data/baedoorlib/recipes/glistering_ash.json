@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "glistering_ash",
+    "pattern": [
+        "S"
+    ],
+    "key": {
+        "S": {
+            "item": "baedoorlib:glistering_sand"
+        }
+    },
+    "result": {
+        "item": "baedoorlib:glistering_ash",
+        "count": 4
+    }
+}
