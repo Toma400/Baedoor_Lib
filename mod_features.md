@@ -3,12 +3,28 @@ The library itself offers both library-like features and common mod ones.
 Click on the link to be sent for more detailed description:
 
 ### Renewability:
+- [End Stone](#glistering-ash)
 - [Soul Soil](#nether-soul-essence)
 
 ### Added items:
+- [Glistering Ash](#glistering-ash)
 - [Nether Soul Essence](#nether-soul-essence)
 
 ---
+#### Glistering Ash
+Glistering ash is dust that falls from endstone mined in End dimension.  
+It can also be formed into sand form, which makes it ethereal material that
+emits slight light.
+
+It can be smelted into end stone. This is however temporary, since originally
+glistering clay is needed.
+
+|          Mod          |           Usage           |
+|:---------------------:|:-------------------------:|
+|         Base          | Renewability of end stone |
+| Wastelands of Baedoor |             -             |
+|   Spires of Baedoor   |             -             |
+
 #### Nether Soul Essence
 Item gathered by killing entities in Nether dimension. Can be crafted into
 block of Nether Soul Essence by simple 3x3 grid recipe.  
