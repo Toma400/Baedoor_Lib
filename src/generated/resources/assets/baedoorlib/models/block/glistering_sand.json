@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "baedoorlib:block/glistering_sand",
+    "particle": "baedoorlib:block/glistering_sand"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "baedoorlib:block/block_of_nether_soul_essence",
+    "particle": "baedoorlib:block/block_of_nether_soul_essence"
+  }
+}
