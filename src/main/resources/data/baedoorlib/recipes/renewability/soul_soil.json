@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "group": "soul soil",
+  "experience": 0.1,
+  "cooking_time": 200,
+  "ingredient": {
+      "item": "baedoorlib:block_of_nether_soul_essence"
+  },
+  "result": {
+      "item": "minecraft:soul_soil"
+  }
+}
