@@ -29,6 +29,8 @@ public class ItemsGen extends ItemModelProvider {
     //--------------------------------------------------------------------
     // ITEM MODELS REGISTRY
     //--------------------------------------------------------------------
+    //TODO: Shouldn't it be not settable? Since you can default it everytime and let handler to it by itself
+    //--------------------------------------------------------------------
     public void ItemRegistrar(Library.DataGenEntry.ofItem[] items) {
         for (Library.DataGenEntry.ofItem item : items) {
             ModelFile modelType = getExistingFile(mcLoc("item/generated")); // default

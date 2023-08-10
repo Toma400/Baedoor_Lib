@@ -21,6 +21,9 @@ public class DataGenerators {
     public static void gatherData(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
         if(event.includeServer()) {
+            generator.addProvider(true, new LootTablesGen.LootTablesRedirector(generator));
+            generator.addProvider(true, new BlocksGen(generator, event.getExistingFileHelper()));
+            generator.addProvider(true, new BlockStatesGen(generator, event.getExistingFileHelper()));
             generator.addProvider(true, new ItemsGen(generator, event.getExistingFileHelper()));
         }
 

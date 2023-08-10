@@ -13,8 +13,11 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-// An example config class. This is not required, but it's a good idea to have one to keep your config organized.
-// Demonstrates how to use Forge's config APIs
+// CONFIG:
+// - spawnable glistering sand (default: true) (spawns glistering sand on top of specific End biomes in small clusters)
+// - spawnable nether soul essence (default: true) (spawns nether soul essence in Nether)
+// - chance of getting nether soul essence (default: 8) (range: 0-100)
+// - chance of getting glistering sand (default: 2) (range: 0-100)
 @Mod.EventBusSubscriber(modid = BaedoorLib.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class Config
 {

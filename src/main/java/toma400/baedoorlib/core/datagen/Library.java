@@ -6,6 +6,8 @@ import net.minecraftforge.registries.RegistryObject;
 import toma400.baedoorlib.core.LibBlocks;
 import toma400.baedoorlib.core.LibItems;
 
+import java.util.Map;
+
 public class Library {
 
     /* MAIN DATAGEN CLASS -------------------------------------------------------------------------------------
@@ -46,7 +48,7 @@ public class Library {
         CUBE_ALL
     }
     public enum BLOCKSTATE {  // cobr: BlockStatesGen
-        DEFAULT, TRAPDOOR
+        DEFAULT
     }
     public enum ITEM { // cobr: ItemsGen
         DEFAULT, GENERATED, HANDHELD, SPAWN_EGG // default lets you use default distributor, other types are custom
@@ -55,14 +57,21 @@ public class Library {
         DEFAULT_BLOCK
     }
 
-    /* MAPS ---------------------------------------------------------------------------------------------------
-    Maps with data that will be taken into datagen functions during generation phase. The only thing you should
-    care about to update manually. Look at 'DataGenEntry' for respective builders.
+    /* ARRAYS -------------------------------------------------------------------------------------------------
+    Arrays with data that will be taken into datagen functions during generation phase. The only thing you
+    should care about to update manually. Look at 'DataGenEntry' for respective builders.
     -------------------------------------------------------------------------------------------------------- */
     public static DataGenEntry.ofBlock[] BLOCKS = {
-            new DataGenEntry.ofBlock(LibBlocks.BLOCK_OF_NETHER_SOUL_ESSENCE, MODEL.CUBE_ALL, BLOCKSTATE.DEFAULT, ITEM.DEFAULT, LOOT_TABLE.DEFAULT_BLOCK)
+            new DataGenEntry.ofBlock(LibBlocks.BLOCK_OF_NETHER_SOUL_ESSENCE, MODEL.CUBE_ALL, BLOCKSTATE.DEFAULT, ITEM.DEFAULT, LOOT_TABLE.DEFAULT_BLOCK),
+            new DataGenEntry.ofBlock(LibBlocks.GLISTERING_SAND,              MODEL.CUBE_ALL, BLOCKSTATE.DEFAULT, ITEM.DEFAULT, LOOT_TABLE.DEFAULT_BLOCK)
     };
     public static DataGenEntry.ofItem[] ITEMS = { // only non-block items!
-            new DataGenEntry.ofItem(LibItems.NETHER_SOUL_ESSENCE, ITEM.DEFAULT)
+            new DataGenEntry.ofItem(LibItems.NETHER_SOUL_ESSENCE, ITEM.DEFAULT),
+            new DataGenEntry.ofItem(LibItems.GLISTERING_ASH,      ITEM.DEFAULT)
     };
+    // public static DataGenEntry.ofTag[] TAGS = {
+            // [string] MOD_ID, [string] TAG_ID, [Array of Registry<Item>] ITEMS   // tags/items  (overloading handles separation automatically)
+            // [string] MOD_ID, [string] TAG_ID, [Array of Registry<Block>] BLOCKS // tags/blocks
+            // new DataGenEntry.ofTag("minecraft", "mineable/shovel", { LibItems.NETHER_SOUL_ESSENCE, LibBlocks.BLOCK_OF_NETHER_SOUL_ESSENCE.get().asItem() })
+    // }
 }

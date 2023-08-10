@@ -24,6 +24,12 @@ public class LibBlocks {
                     .mapColor(MapColor.COLOR_BROWN)
                     .sound(SoundType.SOUL_SOIL)),
                   new Item.Properties());
+    public static final RegistryObject<Block> GLISTERING_SAND = registerBlock("glistering_sand", // add gravity + light level 1
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(0.5F).destroyTime(0.6F)
+                    .mapColor(MapColor.COLOR_LIGHT_BLUE)
+                    .sound(SoundType.SOUL_SAND)),
+                  new Item.Properties());
 
     private static <T extends Block> RegistryObject<T> registerBlock (String name, Supplier<T> block, Item.Properties properties) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

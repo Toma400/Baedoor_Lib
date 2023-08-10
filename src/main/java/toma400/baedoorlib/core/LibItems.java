@@ -13,6 +13,8 @@ public class LibItems {
 
     public static final RegistryObject<Item> NETHER_SOUL_ESSENCE = ITEMS.register("nether_soul_essence",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> GLISTERING_ASH = ITEMS.register("glistering_ash",
+            () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
