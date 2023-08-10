@@ -1,4 +1,5 @@
 import questionable
+import strutils
 import nigui
 import utils
 
@@ -13,6 +14,8 @@ var lang_obj = newSeq[LanguageFile]()
 
 var window = newWindow("JSON Language Files Helper")
 var ctMain = newLayoutContainer(Layout_Vertical)
+var ctUp   = newLayoutContainer(Layout_Horizontal)
+var ctMid  = newLayoutContainer(Layout_Horizontal)
 var newLangTx = newTextBox()
 var newLangBt = newButton("Create language entry")
 var loadLangLs = newComboBox(languageFilesList())
@@ -21,13 +24,19 @@ var loadLangTx = newTextArea()
 block settings:
   window.width  = 800
   window.height = 600
+  ctUp.width = 700
+block align:
+  ctUp.xAlign = XAlign_Center
 block binding:
   window.add(ctMain)
   block newLang:
-    ctMain.add(newLangTx)
-    ctMain.add(newLangBt)
-    ctMain.add(loadLangLs)
-    ctMain.add(loadLangBt)
+    ctUp.add(newLangTx)
+    ctUp.add(newLangBt)
+    ctMain.add(ctUp)
+  block loadLang:
+    ctMid.add(loadLangLs)
+    ctMid.add(loadLangBt)
+    ctMain.add(ctMid)
     ctMain.add(loadLangTx)
 
 newLangBt.onClick = proc(event: ClickEvent) =
@@ -36,7 +45,10 @@ loadLangBt.onClick = proc(event: ClickEvent) =
     lang_id  = loadLangLs.value
     lang_obj = @[languageFileParser(lang_id)]
     for line in toSeq(lang_obj[0]):
-        loadLangTx.addLine(line)
+        var sp = "    "
+        if line.contains("SECTION"):
+            sp = ""
+        loadLangTx.addLine(sp & line)
 
 # running
 show(window)
