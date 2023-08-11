@@ -1,23 +1,13 @@
 package toma400.baedoorlib.events;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.data.worldgen.DimensionTypes;
-import net.minecraft.nbt.EndTag;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.tags.TagKey;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.dimension.DimensionType;
-import net.minecraft.world.level.levelgen.WorldDimensions;
-import net.minecraft.world.level.material.LavaFluid;
-import net.minecraftforge.event.entity.living.LivingDestroyBlockEvent;
-import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -71,7 +61,7 @@ public class BlockEvents {
                     event.getPlayer().addItem(new ItemStack(LibItems.GLISTERING_ASH.get()));
                     // experimental: XP drop?
                     event.getPlayer().giveExperiencePoints(1);
-                    event.getPlayer().playSound(SoundEvents.EXPERIENCE_BOTTLE_THROW);
+                    event.getLevel().playSound(event.getPlayer(), event.getPos(), SoundEvents.EXPERIENCE_BOTTLE_THROW, SoundSource.BLOCKS);
                 }
             }
         }
