@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "baedoorlib:block_of_nether_soul_essence",
+    "baedoorlib:block_of_rotten_flesh",
     "baedoorlib:glistering_sand"
   ]
 }

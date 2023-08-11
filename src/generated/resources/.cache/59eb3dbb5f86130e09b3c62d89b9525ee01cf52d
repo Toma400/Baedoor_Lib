@@ -1,3 +1,4 @@
-// 1.20.1	2023-08-10T19:15:43.0234228	Loot Tables
+// 1.20.1	2023-08-11T12:10:13.4632844	Loot Tables
 fab561cd9f90cb292b9b51fa6d5c558da0d09da2 data/baedoorlib/loot_tables/blocks/block_of_nether_soul_essence.json
+f0658ce1c1abf968f5f81d3609b2e49d25a2d0b6 data/baedoorlib/loot_tables/blocks/block_of_rotten_flesh.json
 74b3daa7c5e7d21cae7bd2ab28c94818bcd3b16c data/baedoorlib/loot_tables/blocks/glistering_sand.json

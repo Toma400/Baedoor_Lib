@@ -63,6 +63,7 @@ public class Library {
     -------------------------------------------------------------------------------------------------------- */
     public static DataGenEntry.ofBlock[] BLOCKS = {
             new DataGenEntry.ofBlock(LibBlocks.BLOCK_OF_NETHER_SOUL_ESSENCE, MODEL.CUBE_ALL, BLOCKSTATE.DEFAULT, ITEM.DEFAULT, LOOT_TABLE.DEFAULT_BLOCK),
+            new DataGenEntry.ofBlock(LibBlocks.BLOCK_OF_ROTTEN_FLESH,        MODEL.CUBE_ALL, BLOCKSTATE.DEFAULT, ITEM.DEFAULT, LOOT_TABLE.DEFAULT_BLOCK),
             new DataGenEntry.ofBlock(LibBlocks.GLISTERING_SAND,              MODEL.CUBE_ALL, BLOCKSTATE.DEFAULT, ITEM.DEFAULT, LOOT_TABLE.DEFAULT_BLOCK)
     };
     public static DataGenEntry.ofItem[] ITEMS = { // only non-block items!

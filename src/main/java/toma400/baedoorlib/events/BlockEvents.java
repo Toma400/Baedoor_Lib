@@ -9,6 +9,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.event.level.BlockEvent;
+import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import toma400.baedoorlib.BaedoorLib;
@@ -26,6 +27,7 @@ public class BlockEvents {
     protected static final Block[] GLISTERING_ASH_DROPS = {
             Blocks.END_STONE
     };
+    protected static final Integer FERTILE_BONUS_CHANCE = 40;
 
     @SubscribeEvent
     public static void soulSoilGeneration(BlockEvent.NeighborNotifyEvent event) {
@@ -62,6 +64,20 @@ public class BlockEvents {
                     // experimental: XP drop?
                     event.getPlayer().giveExperiencePoints(1);
                     event.getLevel().playSound(event.getPlayer(), event.getPos(), SoundEvents.EXPERIENCE_BOTTLE_THROW, SoundSource.BLOCKS);
+                }
+            }
+        }
+    }
+
+    @SubscribeEvent
+    public static void fertileBonus(BlockEvent.CropGrowEvent.Pre event) {
+        if (!event.getLevel().isClientSide()) {
+
+            if (event.getLevel().getBlockState(event.getPos().below(2)).getBlock() == LibBlocks.BLOCK_OF_ROTTEN_FLESH.get()) {
+                if (Math.random() * 100 <= FERTILE_BONUS_CHANCE) {
+                    event.setResult(Event.Result.ALLOW);
+                } else {
+                    event.setResult(Event.Result.DEFAULT);
                 }
             }
         }

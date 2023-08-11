@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "rotten_flesh",
+    "pattern": [
+        "N"
+    ],
+    "key": {
+        "N": {
+            "item": "baedoorlib:block_of_rotten_flesh"
+        }
+    },
+    "result": {
+        "item": "minecraft:rotten_flesh",
+        "count": 9
+    }
+}

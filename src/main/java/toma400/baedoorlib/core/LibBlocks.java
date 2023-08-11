@@ -31,6 +31,13 @@ public class LibBlocks {
                     .sound(SoundType.SOUL_SAND)),
                   new Item.Properties());
 
+    public static final RegistryObject<Block> BLOCK_OF_ROTTEN_FLESH = registerBlock("block_of_rotten_flesh",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(0.5F).destroyTime(0.6F)
+                    .mapColor(MapColor.TERRACOTTA_BROWN)
+                    .sound(SoundType.HONEY_BLOCK)),
+                  new Item.Properties());
+
     private static <T extends Block> RegistryObject<T> registerBlock (String name, Supplier<T> block, Item.Properties properties) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, properties);

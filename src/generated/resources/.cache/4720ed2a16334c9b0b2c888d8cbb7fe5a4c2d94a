@@ -1,5 +1,7 @@
-// 1.20.1	2023-08-10T16:10:35.515192	Block States: baedoorlib
+// 1.20.1	2023-08-11T12:10:13.4605862	Block States: baedoorlib
 34095a3214117c3bf5de3504cde9de6cc0d66bb2 assets/baedoorlib/blockstates/block_of_nether_soul_essence.json
+8c449db0c1e02b63cc62e88346ff4aba719a18ed assets/baedoorlib/blockstates/block_of_rotten_flesh.json
 19bf934b2f14b8d6d5c472f8c0d9158c1d9fe782 assets/baedoorlib/blockstates/glistering_sand.json
 159afe9f8092a31f153bd712de4301a32f60f10d assets/baedoorlib/models/block/block_of_nether_soul_essence.json
+75c8212eaa48e04f7b6ba3de2c84a2dc89739e8b assets/baedoorlib/models/block/block_of_rotten_flesh.json
 91479bf294da077b25cb875ab66888cb18fa905d assets/baedoorlib/models/block/glistering_sand.json

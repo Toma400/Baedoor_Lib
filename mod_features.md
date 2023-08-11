@@ -11,6 +11,9 @@ Click on the link to be sent for more detailed description:
 - [Glistering Ash](#glistering-ash)
 - [Nether Soul Essence](#nether-soul-essence)
 
+### Storage blocks:
+- Block of Rotten Flesh
+
 ---
 #### Glistering Ash
 Glistering ash is dust that falls from endstone mined in End dimension.  
@@ -44,6 +47,18 @@ Similarly to soul sand and soul soil, you can summon wither with this block.
 |         Base          | Renewability of soul soil, alternative block for Soul Speed |
 | Wastelands of Baedoor |                              -                              |
 |   Spires of Baedoor   |                              -                              |
+
+#### Block of Rotten Flesh
+Originally developed for Spires of Baedoor, it's both QoL addition that let
+you pack rotten flesh into nice block form, but also has usage in farming.
+
+You can make your farmlands more fertile by putting rotten flesh below -
+it will make your plants grow slightly faster.
+
+|        Mod        |                Usage                |
+|:-----------------:|:-----------------------------------:|
+|       Base        | Let your farmland crops grow faster |
+| Spires of Baedoor |                  -                  |
 
 ---
 #### Renewabilities
