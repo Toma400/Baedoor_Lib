@@ -3,6 +3,7 @@ The library itself offers both library-like features and common mod ones.
 Click on the link to be sent for more detailed description:
 
 ### Renewability:
+- [Diamond](#renewabilities)
 - [End Stone](#glistering-ash)
 - [Soul Soil](#nether-soul-essence)
 
@@ -43,3 +44,11 @@ Similarly to soul sand and soul soil, you can summon wither with this block.
 |         Base          | Renewability of soul soil, alternative block for Soul Speed |
 | Wastelands of Baedoor |                              -                              |
 |   Spires of Baedoor   |                              -                              |
+
+---
+#### Renewabilities
+There are also various renewabilities not bound to specific resource:
+
+|  Item   |               Renewability way               |
+|:-------:|:--------------------------------------------:|
+| Diamond | Smelt wither skeleton skull in blast furnace |

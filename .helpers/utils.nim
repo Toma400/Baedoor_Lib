@@ -19,14 +19,14 @@ type
 
 # gets mod ID from gradle.properties file of the mod
 proc gradlePropertiesParser* (key: string): string =
-    let cwd = getCurrentDir().replace(r".langhelper", "")
+    let cwd = getCurrentDir().replace(r".helpers", "")
     for line in lines(cwd & "gradle.properties"):
         if line.contains(key):
             return split(line, "=")[1].replace(" ", "")
 
 # parses language file of ID provided
 proc languageFileParser* (lang_id: string): LanguageFile =
-    let f     = getCurrentDir().replace(r".langhelper", "src/main/resources/assets/" & gradlePropertiesParser("mod_id") & "/lang/" & lang_id & ".json")
+    let f     = getCurrentDir().replace(r".helpers", "src/main/resources/assets/" & gradlePropertiesParser("mod_id") & "/lang/" & lang_id & ".json")
     var fSq   = newSeq[TranslationSection]()
     var secSq = newSeq[TranslationLine]()
     for line in lines f:
@@ -54,7 +54,7 @@ proc languageFileWriter* (dest: string, file: LanguageFile) =
             fstr = fstr & "    \"" & line.category & "." & line.mod_id & "." & line.id & "\": \"" & line.transl & "\"" & fin & "\n"
         if find(file.sections, sect) < file.sections.len-1: # make enter if not finished
             fstr = fstr & "\n"
-    writeFile(getCurrentDir().replace(r".langhelper", "src/main/resources/assets/" & gradlePropertiesParser("mod_id") & "/lang/" & dest & ".json"), fstr)
+    writeFile(getCurrentDir().replace(r".helpers", "src/main/resources/assets/" & gradlePropertiesParser("mod_id") & "/lang/" & dest & ".json"), fstr)
 
 # TODO![ temporary ]
 # copies 'en_us' JSON into given ID, preserving structure
@@ -91,7 +91,7 @@ proc createEntry* (cat: string, id: string, transl: string): TranslationLine =
 
 # lists all language files mod contains
 proc languageFilesList* (): seq[string] =
-    let path = getCurrentDir().replace(r".langhelper", "src/main/resources/assets/" & gradlePropertiesParser("mod_id") & "/lang/")
+    let path = getCurrentDir().replace(r".helpers", "src/main/resources/assets/" & gradlePropertiesParser("mod_id") & "/lang/")
     var ret = newSeq[string]()
     for kind, name in walkDir(path, relative=true):
         if kind == pcFile:

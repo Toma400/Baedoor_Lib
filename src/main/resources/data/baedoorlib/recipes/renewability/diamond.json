@@ -1,0 +1,10 @@
+{
+  "group": "diamond",
+  "type": "minecraft:blasting",
+  "experience": 3,
+  "cookingtime": 200,
+  "ingredient": {
+    "item": "minecraft:wither_skeleton_skull"
+  },
+  "result": "minecraft:diamond"
+}
