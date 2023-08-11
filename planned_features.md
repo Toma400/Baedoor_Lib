@@ -21,3 +21,7 @@
 ### Balancing:
 - changing end stone renewability to one from pre-1.19 WoB
 
+# v0.ca1e:
+
+### Guidance:
+- Patchouli book for each Baedoor mod
