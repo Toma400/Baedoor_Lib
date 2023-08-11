@@ -1,8 +1,8 @@
+from utils import cwd
 import std/sequtils
 import strutils
 import os
 
-let cwd    = getCurrentDir().replace(r".helpers", "")
 let search = cwd & "build/libs"
 let dest   = cwd & ".helpers/jars"
 

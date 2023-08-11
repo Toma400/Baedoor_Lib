@@ -17,9 +17,10 @@ type
     LanguageFile* = object
         sections: seq[TranslationSection]
 
+let cwd* = getCurrentDir().replace(r".helpers", "")
+
 # gets mod ID from gradle.properties file of the mod
 proc gradlePropertiesParser* (key: string): string =
-    let cwd = getCurrentDir().replace(r".helpers", "")
     for line in lines(cwd & "gradle.properties"):
         if line.contains(key):
             return split(line, "=")[1].replace(" ", "")
